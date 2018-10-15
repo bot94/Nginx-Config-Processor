@@ -10,13 +10,15 @@
 
 namespace RomanPitak\Nginx\Config;
 
-class ScopeTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ScopeTest extends TestCase
 {
 
     public function testFromFile()
     {
-        Scope::fromFile('tests/test_input.conf')->saveToFile('build/out.conf');
-        $this->assertEquals(@file_get_contents('tests/test_input.conf'), @file_get_contents('build/out.conf'));
+        $out = Scope::fromFile('tests/test_input.conf')->__toString();
+        $this->assertEquals(@file_get_contents('tests/test_input.conf'), $out);
     }
 
     /**

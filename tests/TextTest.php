@@ -10,7 +10,9 @@
 
 namespace RomanPitak\Nginx\Config;
 
-class TextTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TextTest extends TestCase
 {
 
     /**

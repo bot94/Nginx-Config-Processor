@@ -10,7 +10,9 @@
 
 namespace RomanPitak\Nginx\Config;
 
-class CommentTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class CommentTest extends TestCase
 {
 
     public function testGetText()
